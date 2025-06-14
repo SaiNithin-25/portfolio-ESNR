@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sainithin | AI/ML & Game Dev Portfolio</title> 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Dark Mode Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <!-- Custom Script -->
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
+
+    <!-- 🌙 Theme Toggle -->
+    <div class="fixed top-4 right-4">
+      <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+        🌓
+      </button>
+    </div>
+
+    <!-- 🧑 Hero -->
+    <section class="min-h-screen flex items-center justify-center text-center px-4">
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Hi, I'm Sainithin 👋</h1>
+        <p class="text-lg">CSE-AIML Student | Aspiring AI/ML Engineer | Game Dev Enthusiast</p>
+        <div class="mt-4">
+          <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 👨‍💻 About -->
+    <section id="about" class="py-12 px-4 max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+      <p>
+        I’m a 2nd year B.Tech student in CSE-AIML. I enjoy building smart systems with AI/ML and experimenting with game development. Always learning, always curious.
+      </p>
+    </section>
+
+    <!-- 💡 Skills -->
+    <section id="skills" class="py-12 px-4 max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <li>Python</li>
+        <li>C/C++</li>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Machine Learning</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <!-- 🚀 Projects -->
+    <section id="projects" class="py-12 px-4 max-w-5xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded shadow">
+          <h3 class="text-xl font-bold">AI Chatbot</h3>
+          <p>A simple chatbot using NLP and Python.</p>
+          <a href="#" class="text-blue-500 mt-2 inline-block">View on GitHub</a>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+
+    <!-- 🎮 Game Dev -->
+    <section id="gamedev" class="py-12 px-4 max-w-5xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Game Dev Showcase</h2>
+      <p>Here I’ll add my pixel art projects, platformer games, and experiments in Unity or Godot!</p>
+    </section>
+
+    <!-- 🎖️ Certifications -->
+    <section id="badges" class="py-12 px-4 max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Certifications & Badges</h2>
+      <ul>
+        <li>Google ML Crash Course - [Badge Placeholder]</li>
+        <li>Kaggle – Python, Intro to ML - [Badge Placeholder]</li>
+      </ul>
+    </section>
+
+    <!-- 📬 Contact -->
+    <section id="contact" class="py-12 px-4 max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+      <form class="grid gap-4">
+        <input type="text" placeholder="Your Name" class="p-2 rounded bg-gray-200 dark:bg-gray-700" />
+        <input type="email" placeholder="Your Email" class="p-2 rounded bg-gray-200 dark:bg-gray-700" />
+        <textarea placeholder="Your Message" class="p-2 rounded bg-gray-200 dark:bg-gray-700"></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
+      </form>
+    </section>
+
+    <!-- 🔗 Footer -->
+    <footer class="text-center py-6 text-sm text-gray-500">
+      © 2025 Sainithin Ramanujan | Built with ❤️
+    </footer>
+  </body>
+</html>

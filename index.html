@@ -16,8 +16,11 @@
 
     <!-- Custom Script -->
     <script defer src="script.js"></script>
+
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
 
     <!-- 🌙 Theme Toggle -->
@@ -90,17 +93,20 @@
     <!-- 📬 Contact -->
     <section id="contact" class="py-12 px-4 max-w-3xl mx-auto">
       <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
-      <form class="grid gap-4">
-        <input type="text" placeholder="Your Name" class="p-2 rounded bg-gray-200 dark:bg-gray-700" />
-        <input type="email" placeholder="Your Email" class="p-2 rounded bg-gray-200 dark:bg-gray-700" />
-        <textarea placeholder="Your Message" class="p-2 rounded bg-gray-200 dark:bg-gray-700"></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
-      </form>
+      <form id="contact-form"  class="grid gap-4">
+  <input type="text" id="name" placeholder="Your Name" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"/>
+  <input type="email" id="email" placeholder="Your Email" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"/>
+  <textarea id="message" placeholder="Your Message" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"></textarea>
+  <input type="text" name="_gotcha" style="display:none">
+  <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
+</form>
     </section>
+</script>
+
 
     <!-- 🔗 Footer -->
     <footer class="text-center py-6 text-sm text-gray-500">
-      © 2025 Sainithin Ramanujan | Built with ❤️
+      © 2025 Sainithin Ramanujan
     </footer>
   </body>
 </html>

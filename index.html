@@ -6,6 +6,7 @@
     <title>Sainithin | AI/ML & Game Dev Portfolio</title> 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Dark Mode Config -->
     <script>
@@ -31,8 +32,10 @@
     </div>
 
     <!-- 🧑 Hero -->
-    <section class="min-h-screen flex items-center justify-center text-center px-4">
+    <section class="min-h-screen flex items-center justify-center text-center px-4" id="hero" data-aos="fade-up">
       <div>
+        <!-- my imgaes 
+    <img src="images\anime-wallpapers.jpg" alt="Sai Nithin" class="profile-pic">-->
         <h1 class="text-4xl font-bold mb-2">Hi, I'm Sainithin 👋</h1>
         <p class="text-lg">CSE-AIML Student | Aspiring AI/ML Engineer | Game Dev Enthusiast</p>
         <div class="mt-4">
@@ -42,15 +45,65 @@
     </section>
 
     <!-- 👨‍💻 About -->
-    <section id="about" class="py-12 px-4 max-w-3xl mx-auto">
+    <!--<section id="about" class="py-12 px-4 max-w-3xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-4">About Me</h2>
       <p>
         I’m a 2nd year B.Tech student in CSE-AIML. I enjoy building smart systems with AI/ML and experimenting with game development. Always learning, always curious.
       </p>
-    </section>
+    </section> -->
+    <section id="about">
+  <h2 data-aos="fade-up">About Me</h2>
+
+  <div class="about-container">
+    <img src="images\anime-wallpapers.jpg" alt="Sai Nithin" class="profile-pic left">
+
+    <p>
+      Hello! I'm <strong>Sai Nithin</strong>, a 2nd-year BTech student in CSE-AIML. I love building projects in AI, ML, and web development. I'm currently working on personal and team projects, while continuously exploring new tech like chatbots, vision models, and game AI.
+    </p>
+
+    <p>
+      I believe in learning by doing, and this portfolio is one step toward building my professional presence online.
+    </p>
+  </div>
+</section>
+
 
     <!-- 💡 Skills -->
-    <section id="skills" class="py-12 px-4 max-w-3xl mx-auto">
+     <section id="skills">
+  <h2 data-aos="fade-up">Skills & Badges</h2>
+  <div class="skills-grid">
+
+    <!-- Skill Icons -->
+    <div class="skill" data-aos="fade-up">
+      <img src="images\python-icon.webp" alt="Python">
+      <p>Python</p>
+    </div>
+
+    <div class="skill" data-aos="fade-up" data-aos-delay="100">
+      <img src="images\tenserflow.png" alt="TensorFlow">
+      <p>TensorFlow</p>
+    </div>
+
+    <div class="skill" data-aos="fade-up" data-aos-delay="200">
+      <img src="images\Numpy icon.png" alt="NumPy">
+      <p>NumPy</p>
+    </div>
+
+<div class="skill" data-aos="fade-up" data-aos-delay="200">
+      <img src="images\C++ icon.png" alt="C++">
+      <p>C++</p>
+    </div>
+
+    <div class="skill" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/kaggle-badge.png" alt="Kaggle Badge">
+      <p>Kaggle</p>
+    </div>
+
+    <!-- Add more as needed -->
+  </div>
+</section>
+
+    <!--<section id="skills" class="py-12 px-4 max-w-3xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-4">Skills</h2>
       <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <li>Python</li>
@@ -60,21 +113,37 @@
         <li>Machine Learning</li>
         <li>Git & GitHub</li>
       </ul>
-    </section>
+    </section> -->
 
     <!-- 🚀 Projects -->
-    <section id="projects" class="py-12 px-4 max-w-5xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded shadow">
-          <h3 class="text-xl font-bold">AI Chatbot</h3>
-          <p>A simple chatbot using NLP and Python.</p>
-          <a href="#" class="text-blue-500 mt-2 inline-block">View on GitHub</a>
-        </div>
-        <!-- Add more project cards as needed -->
-      </div>
-    </section>
+    <section id="projects" class="py-12 px-4 max-w-5xl mx-auto" data-="zoom-in">
+      <section id="projects">
+  <h2 data-aos="fade-up">My Projects</h2>
+  <div class="project-grid">
 
+    <div class="project-card" data-aos="zoom-in">
+      <img src="images\project-ai-chatbot.jpg" alt="AI Chatbot Screenshot">
+      <h3>AI Chatbot</h3>
+      <p>A simple NLP-based chatbot using Python and NLTK.</p>
+      <a href="https://github.com/yourname/ai-chatbot" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="images/project2.png" alt="Project 2">
+      <h3>ML Digit Classifier</h3>
+      <p>Trained on MNIST dataset using scikit-learn and matplotlib.</p>
+      <a href="https://github.com/yourname/ml-digit-classifier" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/project3.png" alt="Project 3">
+      <h3>Portfolio Website</h3>
+      <p>This site you're looking at! Built using HTML, CSS, and JS.</p>
+      <a href="https://github.com/SaiNithin-25/portfolio-ESNR" target="_blank">GitHub</a>
+    </div>
+
+  </div>
+</section>
     <!-- 🎮 Game Dev -->
     <section id="gamedev" class="py-12 px-4 max-w-5xl mx-auto">
       <h2 class="text-2xl font-semibold mb-4">Game Dev Showcase</h2>
@@ -91,18 +160,24 @@
     </section>
 
     <!-- 📬 Contact -->
-    <section id="contact" class="py-12 px-4 max-w-3xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
-      <form id="contact-form"  class="grid gap-4">
+     <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+     <form id="contact-form"  class="grid gap-4" data-aos="fade-up">
   <input type="text" id="name" placeholder="Your Name" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"/>
   <input type="email" id="email" placeholder="Your Email" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"/>
   <textarea id="message" placeholder="Your Message" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"></textarea>
+
+  <!-- Hidden honeypot field -->
   <input type="text" name="_gotcha" style="display:none">
+
   <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
 </form>
     </section>
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
     <!-- 🔗 Footer -->
     <footer class="text-center py-6 text-sm text-gray-500">

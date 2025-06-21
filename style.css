@@ -2,3 +2,101 @@
   border: 2px solid lime;
   border-radius: 12px;
 }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.project-card {
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  color: white;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin: 0.5rem 0;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+/* About Section Styles */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.profile-pic.left {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00ffd5;
+}
+
+/* Optional: Make it responsive */
+@media (max-width: 600px) {
+  .profile-pic.left {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}
+
+/*skills section styles*/
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skill {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 213, 0.1);
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.skill img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}

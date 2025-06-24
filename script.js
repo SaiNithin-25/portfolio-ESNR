@@ -111,3 +111,47 @@ function answer(type) {
   }
   slimeResponse.textContent = response;
 }
+
+//hero type script
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed("#typed-output", {
+      strings: [
+        "CSE-AIML Student",
+        "Aspiring AI/ML Engineer",
+        "Game Dev Enthusiast",
+        "Always Learning by doing",
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1500,
+      loop: true
+    });
+  });
+
+  //Particle Configuration 
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 60 },
+      color: { value: "#00ffd5" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 120,
+        color: "#00ffd5",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 1.2
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "grab" }
+      }
+    },
+    retina_detect: true
+  });

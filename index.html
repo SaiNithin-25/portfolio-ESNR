@@ -7,6 +7,9 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 
     <!-- Dark Mode Config -->
     <script>
@@ -32,25 +35,30 @@
     </div>
 
     <!-- 🧑 Hero -->
-    <section id="hero"class="min-h-screen flex items-center justify-center text-center px-4" id="hero" data-aos="fade-up">
-      <div>
-        <!-- my imgaes 
-    <img src="images\anime-wallpapers.jpg" alt="Sai Nithin" class="profile-pic">-->
-        <h1 class="text-4xl font-bold mb-2">Hi, I'm Sainithin 👋</h1>
-        <p class="text-lg">CSE-AIML Student | Aspiring AI/ML Engineer | Game Dev Enthusiast</p>
-        <div class="mt-4">
-          <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded">Contact Me</a>
-        </div>
-      </div>
-    </section>
+    <!--<section class="hero" data-aos="fade-up">
+  <div class="hero-content">
+    <img src="images/hero-image.png" alt="Sainithin Avatar" class="hero-img" />
+    <h1><span class="wave">👋</span> Hi, I'm <strong>Sainithin</strong></h1>
+    <p><span id="typed-output"></span></p>
+    <div id="particles-js"></div>
+    <div class="mt-4">
+    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded">Contact Me</a>
+  </div>
+</section>-->
+<div id="particles-js"></div>
+<div class="hero-wrapper">
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <img src="images/hero-image.png" alt="Sainithin Avatar" class="hero-img" />
+      <h1><span class="wave">👋</span> Hi, I'm <strong>Sainithin</strong></h1>
+      <p><span id="typed-output"></span></p>
+      <div class="mt-4">
+      <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded">Contact Me</a>
+    </div>
+  </section>
+</div>
 
     <!-- 👨‍💻 About -->
-    <!--<section id="about" class="py-12 px-4 max-w-3xl mx-auto" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-      <p>
-        I’m a 2nd year B.Tech student in CSE-AIML. I enjoy building smart systems with AI/ML and experimenting with game development. Always learning, always curious.
-      </p>
-    </section> -->
     <section id="about" class="py-12 px-4 max-w-3xl mx-auto" data-aos="fade-up">
   <h2 data-aos="fade-up">About Me</h2>
 
@@ -72,8 +80,6 @@
      <section id="skills">
   <h2 data-aos="fade-up">Skills & Badges</h2>
   <div class="skills-grid">
-
-    <!-- Skill Icons -->
     <div class="skill" data-aos="fade-up">
       <img src="images\python-icon.webp" alt="Python">
       <p>Python</p>
@@ -98,24 +104,10 @@
       <img src="images/kaggle-badge.png" alt="Kaggle Badge">
       <p>Kaggle</p>
     </div>
-
-    <!-- Add more as needed -->
   </div>
 </section>
 
-    <!--<section id="skills" class="py-12 px-4 max-w-3xl mx-auto" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-        <li>Python</li>
-        <li>C/C++</li>
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>Machine Learning</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </section> -->
-
-    <!-- 🚀 Projects -->
+    <!-- Projects -->
     <section id="projects" class="py-12 px-4 max-w-5xl mx-auto" data-="zoom-in">
       <section id="projects">
   <h2 data-aos="fade-up">My Projects</h2>
@@ -144,13 +136,13 @@
 
   </div>
 </section>
-    <!-- 🎮 Game Dev -->
+    <!-- Game Dev -->
     <section id="gamedev" class="py-12 px-4 max-w-5xl mx-auto">
       <h2 class="text-2xl font-semibold mb-4">Game Dev Showcase</h2>
       <p>Here I’ll add my pixel art projects, platformer games, and experiments in Unity or Godot!</p>
     </section>
 
-    <!-- 🎖️ Certifications -->
+    <!--Certifications -->
     <section id="badges" class="py-12 px-4 max-w-3xl mx-auto">
       <h2 class="text-2xl font-semibold mb-4">Certifications & Badges</h2>
       <ul>
@@ -159,7 +151,7 @@
       </ul>
     </section>
 
-    <!-- 📬 Contact -->
+    <!-- Contact -->
     <section id="contact" class="py-12 px-4 max-w-3xl mx-auto"></section>
      <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
      <form id="contact-form"  class="grid gap-4" data-aos="fade-up">
@@ -192,7 +184,6 @@
     </div>
   </div>
 </div>
-
     <!-- 🔗 Footer -->
     <footer class="text-center py-6 text-sm text-gray-500">
       © 2025 Sainithin Ramanujan

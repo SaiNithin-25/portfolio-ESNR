@@ -1,15 +1,77 @@
-.custom-card {
-  border: 2px solid lime;
-  border-radius: 12px;
+/* === Base Transitions === */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* === Light Theme === */
+body.light {
+  background-color: #ffffff;
+  color: #111111;
+}
+body.light header,
+body.light nav,
+body.light .hero,
+body.light .about,
+body.light .projects,
+body.light .skills,
+body.light .contact,
+body.light .main,
+body.light .container,
+body.light section {
+  background-color: #ffffff;
+  color: #111111;
+}
+body.light .project-card,
+body.light .skill,
+body.light .contact form {
+  background-color: #f0f0f0;
+  color: #111111;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+body.light .button,
+body.light button {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* === Dark Theme === */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+body.dark header,
+body.dark nav,
+body.dark .hero,
+body.dark .about,
+body.dark .projects,
+body.dark .skills,
+body.dark .contact,
+body.dark .main,
+body.dark .container,
+body.dark section {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+body.dark .project-card,
+body.dark .skill,
+body.dark .contact form {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+body.dark .button,
+body.dark button {
+  background-color: #00ffd5;
+  color: #000000;
+}
+
+/* === Project Card Styles === */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   padding: 1rem;
 }
-
 .project-card {
   background-color: #1f1f1f;
   border-radius: 15px;
@@ -20,16 +82,13 @@
   color: white;
   text-align: center;
 }
-
 .project-card img {
   width: 100%;
   border-radius: 10px;
 }
-
 .project-card h3 {
   margin: 0.5rem 0;
 }
-
 .project-card a {
   display: inline-block;
   margin-top: 0.5rem;
@@ -37,20 +96,19 @@
   text-decoration: none;
   font-weight: bold;
 }
-
 .project-card:hover {
   transform: scale(1.05);
 }
-/* About Section Styles */
+
+/* === About Section Styles === */
 .about-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
   line-height: 1.6;
   font-size: 1rem;
-  color: #e0e0e0;
+  color: inherit;
 }
-
 .profile-pic.left {
   float: left;
   width: 150px;
@@ -61,8 +119,6 @@
   object-fit: cover;
   border: 3px solid #00ffd5;
 }
-
-/* Optional: Make it responsive */
 @media (max-width: 600px) {
   .profile-pic.left {
     float: none;
@@ -71,7 +127,7 @@
   }
 }
 
-/*skills section styles*/
+/* === Skills Section Styles === */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -81,19 +137,17 @@
   margin: 0 auto;
   text-align: center;
 }
-
 .skill {
-  background-color: #1e1e1e;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 213, 0.1);
   transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(0, 255, 213, 0.1);
+  color: inherit;
+  background-color: inherit;
 }
-
 .skill:hover {
   transform: scale(1.05);
 }
-
 .skill img {
   width: 60px;
   height: 60px;
@@ -101,7 +155,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Slime Chatbot Styles */
+/* === Slime Chatbot Styles === */
 #slime-chatbot {
   position: fixed;
   bottom: 20px;
@@ -109,7 +163,6 @@
   z-index: 999;
   text-align: center;
 }
-
 #slime-avatar {
   width: 80px;
   cursor: pointer;
@@ -118,7 +171,6 @@
 #slime-avatar:hover {
   transform: scale(1.5);
 }
-
 #slime-bubble {
   background: #222;
   color: #fff;
@@ -131,11 +183,9 @@
   box-shadow: 0 0 10px #00ffd5;
   transition: all 0.3s ease;
 }
-
 #slime-bubble.hidden {
   display: none;
 }
-
 .chat-options button {
   margin-top: 0.5rem;
   margin-right: 0.5rem;

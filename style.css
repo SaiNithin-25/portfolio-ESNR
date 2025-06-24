@@ -100,3 +100,50 @@
   object-fit: contain;
   margin-bottom: 0.5rem;
 }
+
+/* Slime Chatbot Styles */
+#slime-chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+#slime-avatar {
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#slime-avatar:hover {
+  transform: scale(1.5);
+}
+
+#slime-bubble {
+  background: #222;
+  color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 260px;
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  box-shadow: 0 0 10px #00ffd5;
+  transition: all 0.3s ease;
+}
+
+#slime-bubble.hidden {
+  display: none;
+}
+
+.chat-options button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  background: #00ffd5;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}

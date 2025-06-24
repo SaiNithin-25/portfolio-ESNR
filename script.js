@@ -83,3 +83,31 @@ AOS.init({
   offset: 120,        // how far from top to trigger animation
   once: false,         // animate only once (not every scroll)
 });
+
+// slime chatbot
+const slimeAvatar = document.getElementById("slime-avatar");
+const slimeBubble = document.getElementById("slime-bubble");
+const slimeResponse = document.getElementById("slime-response");
+
+slimeAvatar.addEventListener("click", () => {
+  slimeBubble.classList.toggle("hidden");
+});
+
+function answer(type) {
+  let response = "";
+  switch (type) {
+    case "who":
+      response = "I'm Sai Nithin, a 2nd-year CSE-AIML student who loves AI, ML, and building cool things!";
+      break;
+    case "skills":
+      response = "Python, TensorFlow, NumPy, OpenCV, Scikit-learn, HTML, CSS, JS, Git & more.";
+      break;
+    case "resume":
+      response = "You can download my resume here: [upload your link]";
+      break;
+    case "cool":
+      response = "I built this portfolio with animations, scroll effects, and a slime like me 😄!";
+      break;
+  }
+  slimeResponse.textContent = response;
+}

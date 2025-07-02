@@ -79,7 +79,7 @@ window.addEventListener("hashchange", function () {
 
 // Smooth scroll for internal links
 AOS.init({
-  duration: 800,      // animation duration (ms)
+  duration: 900,      // animation duration (ms)
   offset: 120,        // how far from top to trigger animation
   once: false,         // animate only once (not every scroll)
 });
@@ -131,7 +131,7 @@ function answer(type) {
   //Particle Configuration 
   particlesJS("particles-js", {
     particles: {
-      number: { value: 60 },
+      number: { value: 70 },
       color: { value: "#00ffd5" },
       shape: { type: "circle" },
       opacity: { value: 0.5 },

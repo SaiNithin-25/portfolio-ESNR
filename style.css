@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* === Base Transitions === */
 * {
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -8,6 +12,7 @@ body.light {
   background-color: #ffffff;
   color: #111111;
 }
+
 body.light header,
 body.light nav,
 body.light .hero,
@@ -21,6 +26,7 @@ body.light section {
   background-color: #ffffff;
   color: #111111;
 }
+
 body.light .project-card,
 body.light .skill,
 body.light .contact form {
@@ -28,10 +34,22 @@ body.light .contact form {
   color: #111111;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
+
 body.light .button,
 body.light button {
   background-color: #007bff;
   color: #ffffff;
+}
+
+body.light .navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #111;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body.light .navbar a {
+  color: #111;
 }
 
 /* === Dark Theme === */
@@ -39,6 +57,7 @@ body.dark {
   background-color: #121212;
   color: #f0f0f0;
 }
+
 body.dark header,
 body.dark nav,
 body.dark .hero,
@@ -52,6 +71,7 @@ body.dark section {
   background-color: #121212;
   color: #f0f0f0;
 }
+
 body.dark .project-card,
 body.dark .skill,
 body.dark .contact form {
@@ -59,10 +79,28 @@ body.dark .contact form {
   color: #f0f0f0;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
+
 body.dark .button,
 body.dark button {
   background-color: #00ffd5;
   color: #000000;
+}
+
+body.dark .navbar {
+  background-color: rgba(18, 18, 18, 0.95);
+  color: #f0f0f0;
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #312e2e;
+}
+
+body.dark .navbar a {
+  color: #f0f0f0;
+}
+
+/* Shared navbar hover */
+body.dark .navbar a:hover,
+body.light .navbar a:hover {
+  color: #00ffd5;
 }
 
 /* === Project Card Styles === */
@@ -72,23 +110,27 @@ body.dark button {
   gap: 2rem;
   padding: 1rem;
 }
+
 .project-card {
-  background-color: #1f1f1f;
+  background-color: inherit;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   transition: transform 0.3s ease;
-  color: white;
+  color: inherit;
   text-align: center;
 }
+
 .project-card img {
   width: 100%;
   border-radius: 10px;
 }
+
 .project-card h3 {
   margin: 0.5rem 0;
 }
+
 .project-card a {
   display: inline-block;
   margin-top: 0.5rem;
@@ -96,6 +138,7 @@ body.dark button {
   text-decoration: none;
   font-weight: bold;
 }
+
 .project-card:hover {
   transform: scale(1.05);
 }
@@ -109,6 +152,7 @@ body.dark button {
   font-size: 1rem;
   color: inherit;
 }
+
 .profile-pic.left {
   float: left;
   width: 150px;
@@ -119,6 +163,7 @@ body.dark button {
   object-fit: cover;
   border: 3px solid #00ffd5;
 }
+
 @media (max-width: 600px) {
   .profile-pic.left {
     float: none;
@@ -137,6 +182,7 @@ body.dark button {
   margin: 0 auto;
   text-align: center;
 }
+
 .skill {
   padding: 1rem;
   border-radius: 10px;
@@ -145,9 +191,11 @@ body.dark button {
   color: inherit;
   background-color: inherit;
 }
+
 .skill:hover {
   transform: scale(1.05);
 }
+
 .skill img {
   width: 60px;
   height: 60px;
@@ -163,14 +211,17 @@ body.dark button {
   z-index: 999;
   text-align: center;
 }
+
 #slime-avatar {
   width: 80px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
+
 #slime-avatar:hover {
   transform: scale(1.5);
 }
+
 #slime-bubble {
   background: #222;
   color: #fff;
@@ -183,9 +234,11 @@ body.dark button {
   box-shadow: 0 0 10px #00ffd5;
   transition: all 0.3s ease;
 }
+
 #slime-bubble.hidden {
   display: none;
 }
+
 .chat-options button {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
@@ -198,7 +251,7 @@ body.dark button {
   cursor: pointer;
 }
 
-/* === hero section Styles === */
+/* === Hero Section Styles === */
 .hero {
   display: flex;
   flex-direction: column;
@@ -240,7 +293,7 @@ body.dark button {
   100% { transform: rotate(0deg); }
 }
 
-/* === hero type style === */
+/* === Hero Typing Style === */
 #typed-output {
   font-size: 1.2rem;
   font-weight: 500;
@@ -254,7 +307,7 @@ body.dark button {
   top: 0;
   left: 0;
   z-index: -1;
-  pointer-events: none; /* Prevent blocking interaction */
+  pointer-events: none;
 }
 
 .hero-wrapper {
@@ -262,3 +315,46 @@ body.dark button {
   z-index: 1;
 }
 
+/* === Navbar === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffd5;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffd5;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #00ffd5;
+}

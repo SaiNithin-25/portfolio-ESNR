@@ -27,27 +27,31 @@
   
   <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
 
-    <!-- 🌙 Theme Toggle -->
-    <div class="fixed top-4 right-4">
+    <!-- ThemeToggle -->
+    <div class="fixed top-4 right-4 z-[99999]">
       <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
         🌓
       </button>
     </div>
 
-    <!-- 🧑 Hero -->
-    <!--<section class="hero" data-aos="fade-up">
-  <div class="hero-content">
-    <img src="images/hero-image.png" alt="Sainithin Avatar" class="hero-img" />
-    <h1><span class="wave">👋</span> Hi, I'm <strong>Sainithin</strong></h1>
-    <p><span id="typed-output"></span></p>
-    <div id="particles-js"></div>
-    <div class="mt-4">
-    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded">Contact Me</a>
-  </div>
-</section>-->
+    <header class="navbar" data-aos="fade-down">
+  <nav class="container">
+    <div class="logo">Sainithin</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header> 
+
+
+    <!-- Hero -->
 <div id="particles-js"></div>
 <div class="hero-wrapper">
-  <section class="hero" data-aos="fade-up">
+  <section id="home" class="hero" data-aos="fade-up">
     <div class="hero-content">
       <img src="images/hero-image.png" alt="Sainithin Avatar" class="hero-img" />
       <h1><span class="wave">👋</span> Hi, I'm <strong>Sainithin</strong></h1>
@@ -58,15 +62,15 @@
   </section>
 </div>
 
-    <!-- 👨‍💻 About -->
-    <section id="about" class="py-12 px-4 max-w-3xl mx-auto" data-aos="fade-up">
+    <!-- About -->
+    <section id="about" class="about py-12 px-4 max-w-3xl mx-auto" data-aos="fade-up">
   <h2 data-aos="fade-up">About Me</h2>
 
   <div class="about-container">
     <img src="images\anime-wallpapers.jpg" alt="Sai Nithin" class="profile-pic left">
 
     <p>
-      Hello! I'm <strong>Sai Nithin</strong>, a 2nd-year BTech student in CSE-AIML. I love building projects in AI, ML, and web development. I'm currently working on personal and team projects, while continuously exploring new tech like chatbots, vision models, and game AI.
+      Hello! I'm <strong>E.Sai Nithin</strong>, a 2nd-year BTech student in CSE-AIML. I love building projects in AI, ML, and web development. I'm currently working on personal and team projects, while continuously exploring new tech like chatbots, vision models, and game AI.
     </p>
 
     <p>
@@ -76,16 +80,16 @@
 </section>
 
 
-    <!-- 💡 Skills -->
-     <section id="skills">
-  <h2 data-aos="fade-up">Skills & Badges</h2>
+    <!-- Skills -->
+     <section id="skills" class="skills py-12 px-4 max-w-3xl mx-auto">
+  <h2 data-aos="fade-up">Skills</h2>
   <div class="skills-grid">
     <div class="skill" data-aos="fade-up">
       <img src="images\python-icon.webp" alt="Python">
       <p>Python</p>
     </div>
 
-    <div class="skill" data-aos="fade-up" data-aos-delay="100">
+    <div class="skill" data-aos="fade-down" data-aos-delay="100">
       <img src="images\tenserflow.png" alt="TensorFlow">
       <p>TensorFlow</p>
     </div>
@@ -95,7 +99,7 @@
       <p>NumPy</p>
     </div>
 
-<div class="skill" data-aos="fade-up" data-aos-delay="200">
+<div class="skill" data-aos="fade-down" data-aos-delay="200">
       <img src="images\C++ icon.png" alt="C++">
       <p>C++</p>
     </div>
@@ -108,8 +112,7 @@
 </section>
 
     <!-- Projects -->
-    <section id="projects" class="py-12 px-4 max-w-5xl mx-auto" data-="zoom-in">
-      <section id="projects">
+    <section id="projects" class="projects py-12 px-4 max-w-5xl mx-auto" data-="zoom-in">
   <h2 data-aos="fade-up">My Projects</h2>
   <div class="project-grid">
 
@@ -139,6 +142,14 @@
     <!-- Game Dev -->
     <section id="gamedev" class="py-12 px-4 max-w-5xl mx-auto">
       <h2 class="text-2xl font-semibold mb-4">Game Dev Showcase</h2>
+      <div class="project-grid">
+        <div class="project-card" data-aos="zoom-in">
+          <img src="images/project4.png" alt="Project 4">
+          <h3>Platformer Game</h3>
+          <p>A 2D platformer game built with Unity.</p>
+          <a href="https://github.com/yourname/platformer-game" target="_blank">GitHub</a>
+        </div>
+      </div>
       <p>Here I’ll add my pixel art projects, platformer games, and experiments in Unity or Godot!</p>
     </section>
 
@@ -152,9 +163,9 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-12 px-4 max-w-3xl mx-auto"></section>
-     <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
-     <form id="contact-form"  class="grid gap-4" data-aos="fade-up">
+    <section id="contact" class="contact py-12 px-4 max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+      <form id="contact-form" class="grid gap-4" data-aos="fade-up">
   <input type="text" id="name" placeholder="Your Name" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"/>
   <input type="email" id="email" placeholder="Your Email" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"/>
   <textarea id="message" placeholder="Your Message" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"></textarea>
@@ -184,7 +195,7 @@
     </div>
   </div>
 </div>
-    <!-- 🔗 Footer -->
+    <!-- Footer -->
     <footer class="text-center py-6 text-sm text-gray-500">
       © 2025 Sainithin Ramanujan
     </footer>

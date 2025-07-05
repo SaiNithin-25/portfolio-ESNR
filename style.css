@@ -41,7 +41,7 @@ body.light button {
   color: #ffffff;
 }
 
-body.light .navbar {
+/*body.light .navbar {
   background-color: rgba(255, 255, 255, 0.95);
   color: #111;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@ body.light .navbar {
 
 body.light .navbar a {
   color: #111;
-}
+}*/
 
 /* === Dark Theme === */
 body.dark {
@@ -86,7 +86,7 @@ body.dark button {
   color: #000000;
 }
 
-body.dark .navbar {
+/*body.dark .navbar {
   background-color: rgba(18, 18, 18, 0.95);
   color: #f0f0f0;
   box-shadow: 0 1px 5px rgba(255, 255, 255, 0.05);
@@ -97,11 +97,11 @@ body.dark .navbar a {
   color: #f0f0f0;
 }
 
-/* Shared navbar hover */
+ Shared navbar hover 
 body.dark .navbar a:hover,
 body.light .navbar a:hover {
   color: #00ffd5;
-}
+}*/
 
 /* === Project Card Styles === */
 .project-grid {
@@ -315,18 +315,19 @@ body.light .navbar a:hover {
   z-index: 1;
 }
 
-/* === Navbar === */
+/* --- Navbar --- */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  backdrop-filter: blur(6px);
-  z-index: 1000;
-  transition: background-color 0.3s ease;
+  z-index: 999;
+  background-color: var(--navbar-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar .container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -338,23 +339,71 @@ body.light .navbar a:hover {
   color: #00ffd5;
 }
 
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  transition: max-height 0.3s ease;
 }
 
 .nav-links a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #00ffd5;
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-.navbar a.active {
-  border-bottom: 2px solid #00ffd5;
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #00ffd5;
+  border-radius: 2px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  border-top-right-radius: 0.5rem;
+}
+
+#theme-btn {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    width: 100%;
+    background-color: inherit;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 400px;
+    padding: 1rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #typed-output {
+    font-size: 1rem;
+  }
 }

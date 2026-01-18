@@ -11,6 +11,7 @@ html {
 body.light {
   background-color: #ffffff;
   color: #111111;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
 }
 
 body.light header,
@@ -56,6 +57,7 @@ body.light .navbar a {
 body.dark {
   background-color: #121212;
   color: #f0f0f0;
+  --navbar-bg: rgba(18, 18, 18, 0.95);
 }
 
 body.dark header,
@@ -251,6 +253,23 @@ body.light .navbar a:hover {
   cursor: pointer;
 }
 
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #00ffd5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* === Hero Section Styles === */
 .hero {
   display: flex;
@@ -405,5 +424,10 @@ body.light .navbar a:hover {
 
   #typed-output {
     font-size: 1rem;
+  }
+
+  .hero-img {
+    width: 120px;
+    height: 120px;
   }
 }

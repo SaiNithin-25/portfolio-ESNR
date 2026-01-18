@@ -33,7 +33,7 @@
     <div class="logo">ESNR</div>
 
     <div class="theme-toggle">
-      <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+      <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700" aria-label="Toggle theme">
         🌓
       </button>
     </div>
@@ -52,26 +52,21 @@
 </header>
 
 
-    <!-- Hero -->
-<div id="particles-js"></div>
-<div class="hero-wrapper">
   <section id="hero" class="hero" data-aos="fade-up">
     <div class="hero-content">
-      <img src="images\my photo.jpg" alt="Sainithin Avatar" class="hero-img" />
+      <img src="images/my photo.jpg" alt="Sainithin Avatar" class="hero-img" loading="lazy" />
       <h1><span class="wave">👋</span> Hi, I'm <strong>Sainithin</strong></h1>
       <p><span id="typed-output"></span></p>
       <div class="mt-4">
       <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded">Contact Me</a>
     </div>
   </section>
-</div>
 
-    <!-- About -->
     <section id="about" class="about py-12 px-4 max-w-3xl mx-auto" data-aos="fade-up">
-  <h2 data-aos="fade-up">About Me</h2>
+  <h2 data-aos="fade-up" data-aos-delay="100">About Me</h2>
 
   <div class="about-container">
-    <img src="images\anime-wallpapers.jpg" alt="Sai Nithin" class="profile-pic left">
+    <img src="images/anime-wallpapers.jpg" alt="Sai Nithin" class="profile-pic left" loading="lazy">
 
     <p>
       Hello! I'm <strong>E.Sai Nithin</strong>, a 2nd-year BTech student in CSE-AIML. I love building projects in AI, ML, and web development. I'm currently working on personal and team projects, while continuously exploring new tech like chatbots, vision models, and game AI.
@@ -86,25 +81,25 @@
 
     <!-- Skills -->
      <section id="skills" class="skills py-12 px-4 max-w-3xl mx-auto">
-  <h2 data-aos="fade-up">Skills</h2>
+  <h2 data-aos="fade-up" data-aos-delay="200">Skills</h2>
   <div class="skills-grid">
     <div class="skill" data-aos="fade-up">
-      <img src="images\python-icon.webp" alt="Python">
+      <img src="images/python-icon.webp" alt="Python" loading="lazy">
       <p>Python</p>
     </div>
 
     <div class="skill" data-aos="fade-down" data-aos-delay="100">
-      <img src="images\tenserflow.png" alt="TensorFlow">
+      <img src="images/tenserflow.png" alt="TensorFlow" loading="lazy">
       <p>TensorFlow</p>
     </div>
 
     <div class="skill" data-aos="fade-up" data-aos-delay="200">
-      <img src="images\Numpy icon.png" alt="NumPy">
+      <img src="images/Numpy icon.png" alt="NumPy" loading="lazy">
       <p>NumPy</p>
     </div>
 
 <div class="skill" data-aos="fade-down" data-aos-delay="200">
-      <img src="images\C++ icon.png" alt="C++">
+      <img src="images/C++ icon.png" alt="C++" loading="lazy">
       <p>C++</p>
     </div>
 
@@ -115,27 +110,26 @@
   </div>
 </section>
 
-    <!-- Projects -->
-    <section id="projects" class="projects py-12 px-4 max-w-5xl mx-auto" data-="zoom-in">
+    <section id="projects" class="projects py-12 px-4 max-w-5xl mx-auto" data-aos="zoom-in">
   <h2 data-aos="fade-up">My Projects</h2>
   <div class="project-grid">
 
     <div class="project-card" data-aos="zoom-in">
-      <img src="images\project-ai-chatbot.jpg" alt="AI Chatbot Screenshot">
+      <img src="images/project-ai-chatbot.jpg" alt="AI Chatbot Screenshot" loading="lazy">
       <h3>AI Chatbot</h3>
       <p>A simple NLP-based chatbot using Python and NLTK.</p>
       <a href="https://github.com/yourname/ai-chatbot" target="_blank">GitHub</a>
     </div>
 
     <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-      <img src="images\project-ai-chatbot.jpg" alt="Project 2">
+      <img src="images/project-ai-chatbot.jpg" alt="Project 2" loading="lazy">
       <h3>Ai chatbot</h3>
       <p>Trained on MNIST dataset using scikit-learn and matplotlib.</p>
       <a href="https://github.com/yourname/ml-digit-classifier" target="_blank">GitHub</a>
     </div>
 
     <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-      <img src="images\project-ai-chatbot.jpg" alt="Project 3">
+      <img src="images/project-ai-chatbot.jpg" alt="Project 3" loading="lazy">
       <h3>Portfolio Website</h3>
       <p>This site you're looking at! Built using HTML, CSS, and JS.</p>
       <a href="https://github.com/SaiNithin-25/portfolio-ESNR" target="_blank">GitHub</a>
@@ -148,7 +142,7 @@
       <h2 class="text-2xl font-semibold mb-4">Game Dev Showcase</h2>
       <div class="project-grid">
         <div class="project-card" data-aos="zoom-in">
-          <img src="images\anime-wallpapers.jpg" alt="Project 4">
+          <img src="images/anime-wallpapers.jpg" alt="Project 4" loading="lazy">
           <h3>Platformer Game</h3>
           <p>A 2D platformer game built with Unity.</p>
           <a href="https://github.com/yourname/platformer-game" target="_blank">GitHub</a>
@@ -166,9 +160,8 @@
       </ul>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="contact py-12 px-4 max-w-3xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+      <h2 class="text-2xl font-semibold mb-4" data-aos="fade-up">Contact Me</h2>
       <form id="contact-form" class="grid gap-4" data-aos="fade-up">
   <input type="text" id="name" placeholder="Your Name" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"/>
   <input type="email" id="email" placeholder="Your Email" required class="p-2 rounded bg-gray-200 dark:bg-gray-700"/>
@@ -180,7 +173,6 @@
   <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
 </form>
     </section>
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -188,20 +180,25 @@
 </script>
 
 <div id="slime-chatbot">
-  <img src="images\slime.gif" alt="Slime Assistant" id="slime-avatar">
-  <div id="slime-bubble" class="hidden">
+  <img src="images/slime.gif" alt="Slime Assistant" id="slime-avatar">
+    <div id="slime-bubble" class="hidden">
     <p id="slime-response">Hi! I'm SlimeBot. Ask me anything!</p>
     <div class="chat-options">
       <button onclick="answer('who')">Who are you?</button>
       <button onclick="answer('skills')">Skills?</button>
-      <button onclick="answer('resume')">Resume?</button>
-      <button onclick="answer('cool')">Something cool!</button>
+      <button onclick="answer('projects')">Projects?</button>
+      <button onclick="answer('contact')">Contact?</button>
     </div>
   </div>
 </div>
     <!-- Footer -->
     <footer class="text-center py-6 text-sm text-gray-500">
-      © 2025 Sainithin Ramanujan
+      <div class="flex justify-center space-x-4 mb-2">
+        <a href="https://github.com/SaiNithin-25" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:sainithin@example.com" aria-label="Email">Email</a>
+      </div>
+      © 2026 Sainithin Ramanujan
     </footer>
   </body>
 </html>

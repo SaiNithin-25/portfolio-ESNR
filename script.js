@@ -1,6 +1,23 @@
 const themeToggle = document.getElementById("themeToggle");
 const htmlEl = document.documentElement;
 
+if (themeToggle) {
+  // Load saved or system preference
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(prefersDark ? "dark" : "light");
+  }
+
+  // Toggle on button click
+  themeToggle.addEventListener("click", () => {
+    const isDark = htmlEl.classList.contains("dark");
+    setTheme(isDark ? "light" : "dark");
+  });
+}
+
 function setTheme(mode) {
   if (mode === "dark") {
     htmlEl.classList.add("dark");
@@ -11,63 +28,51 @@ function setTheme(mode) {
   }
 }
 
-// Load saved or system preference
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  setTheme(savedTheme);
-} else {
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  setTheme(prefersDark ? "dark" : "light");
-}
-
-// Toggle on button click
-themeToggle.addEventListener("click", () => {
-  const isDark = htmlEl.classList.contains("dark");
-  setTheme(isDark ? "light" : "dark");
-});
-
 // Contact form submission
-document.getElementById("contact-form").addEventListener("submit", async function (e) {
-  e.preventDefault(); // stop the form from submitting normally
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault(); // stop the form from submitting normally
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-  const button = this.querySelector("button");
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const button = this.querySelector("button");
 
-  button.disabled = true;
-  button.textContent = "Sending...";
+    button.disabled = true;
+    button.innerHTML = '<span class="spinner"></span> Sending...';
 
-  try {
-    const response = await fetch("https://formspree.io/f/xgvyyqpo", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message
-      })
-    });
+    try {
+      const response = await fetch("https://formspree.io/f/xgvyyqpo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message
+        })
+      });
 
-    if (response.ok) {
-      alert("✅ Message sent successfully!");
-      this.reset();
-    } else {
-      alert("❌ Something went wrong.");
+      if (response.ok) {
+        alert("✅ Message sent successfully!");
+        this.reset();
+      } else {
+        alert("❌ Something went wrong.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("❌ Network error. Try again later.");
     }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("❌ Network error. Try again later.");
-  }
 
-  setTimeout(() => {
-    button.disabled = false;
-    button.textContent = "Send";
-  }, 2000);
-});
+    setTimeout(() => {
+      button.disabled = false;
+      button.textContent = "Send";
+    }, 2000);
+  });
+}
 
 
 // Prevent hash change for contact form
@@ -89,9 +94,22 @@ const slimeAvatar = document.getElementById("slime-avatar");
 const slimeBubble = document.getElementById("slime-bubble");
 const slimeResponse = document.getElementById("slime-response");
 
-slimeAvatar.addEventListener("click", () => {
-  slimeBubble.classList.toggle("hidden");
-});
+if (slimeAvatar && slimeBubble) {
+  slimeAvatar.addEventListener("click", () => {
+    slimeBubble.classList.toggle("hidden");
+  });
+
+  // Keyboard navigation for chatbot buttons
+  const chatButtons = slimeBubble.querySelectorAll("button");
+  chatButtons.forEach(btn => {
+    btn.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+}
 
 function answer(type) {
   let response = "";
@@ -108,11 +126,28 @@ function answer(type) {
     case "cool":
       response = "I built this portfolio with animations, scroll effects, and a slime like me 😄!";
       break;
+    case "projects":
+      response = "Check out my projects section! I have AI chatbots, ML models, and game dev stuff.";
+      break;
+    case "contact":
+      response = "Use the contact form below or email me at sainithin@example.com.";
+      break;
+    default:
+      response = "Sorry, I don't understand that. Try 'who', 'skills', 'projects', or 'contact'!";
   }
-  slimeResponse.textContent = response;
+  if (slimeResponse) {
+    slimeResponse.textContent = response;
+  }
 }
 
-//hero type script
+// Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => console.log('SW registered'))
+      .catch(error => console.log('SW registration failed'));
+  });
+}
   document.addEventListener("DOMContentLoaded", function () {
     new Typed("#typed-output", {
       strings: [
@@ -157,14 +192,33 @@ function answer(type) {
   });
 
 // Hamburger menu 
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
 
+if (hamburger && navLinks) {
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
   });
+
+  // Keyboard navigation for hamburger
+  hamburger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      hamburger.click();
+    }
+  });
+
+  // Close menu when a link is clicked
+  const links = navLinks.querySelectorAll("a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+    });
+  });
+
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       navLinks.classList.remove("open");
     }
   });
+}
